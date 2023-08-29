@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
+    ports:
+      - "8099:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: hamed77yosefian@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: Hamed_1377
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+
+volumes:
+  pgadmin-data:
